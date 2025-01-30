@@ -1,12 +1,16 @@
-
+import React from "react"
+import Landing from './components/home/Landing'
+import Navbar from './components/universal/navbar'
 
 function App() {
- 
+  
 
   return (
-     <div className=" bg-black">
-      <h1 className="text-white text-4xl  ">GDG Hackathon</h1>
-     </div>
+
+     <>
+      <Navbar/>
+      <Landing/>
+     </>
   )
 }
 
