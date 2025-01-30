@@ -3,8 +3,8 @@
 ## Tech Stack
 - [React.js](https://react.dev/learn)
 - [Tailwind CSS](https://tailwindcss.com/docs)
--[Acernity UI](https://ui.aceternity.com/components)
 - [Vercel](https://vercel.com/docs)
+- -[Acernity UI](https://ui.aceternity.com/components)
 
 ## Getting Started
 
