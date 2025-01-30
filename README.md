@@ -1,11 +1,9 @@
 ## GDG OnCampus TMSL Hackathon 
 
 ## Tech Stack
--- [Next.js](https://nextjs.org/docs/14)
+- [React.js](https://react.dev/learn)
 - [Tailwind CSS](https://tailwindcss.com/docs)
-- [Prisma](https://www.prisma.io/docs)
-- [TypeScript](https://www.typescriptlang.org/docs)
-- [NextAuth.js](https://authjs.dev/)
+-[Acernity UI](https://ui.aceternity.com/components)
 - [Vercel](https://vercel.com/docs)
 
 ## Getting Started
