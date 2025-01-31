@@ -1,12 +1,5 @@
-body {
-    background-color: #00040f;
-    width: 100%;
-    height: auto;
-    font-family: "Poppins", sans-serif;
-  }
-  .testanomial-icon{
-    border: 1px solid gray;
-  }
+
+ 
   .navbar {
     width: 90%;
     display: flex;
@@ -30,7 +23,6 @@ body {
     height: 40px;
   }
   .navbar-box {
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
