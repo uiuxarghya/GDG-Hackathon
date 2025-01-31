@@ -1,0 +1,130 @@
+.hero-container {
+    background-color: transparent;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .hero-subtitle {
+    color: #a288e3;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #7360a3, #fcb0d3);
+    -webkit-background-clip: text;
+    color: transparent; /* Ensures text color is transparent to show the gradient */
+  }
+  
+  
+  .countdown-label {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .event-details {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    min-width: 300px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .detail-item i {
+    margin-right: 1rem;
+  }
+  
+  .register-button {
+    background: transparent;
+    border: 1px solid #a288e3;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background: #a288e3;
+  }
+  .event-section {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-block: 10px;
+
+  }
+
+  .event-details {
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .whatsapp-section {
+    margin-bottom: 40px;
+    margin-left: 100px;
+  }
+  
+  .qr-code {
+    width: 100px;
+    height: 100px;
+    background: whitesmoke;
+    margin: 1rem auto;
+  }
+  
+  .here-link {
+    color: #00ffff;
+    text-decoration: none;
+  }
+  
+  .here-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .countdown-container {
+      gap: 1rem;
+    }
+  
+    .countdown-number {
+      font-size: 2.5rem;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
