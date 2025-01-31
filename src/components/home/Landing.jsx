@@ -15,7 +15,7 @@ export default function Home() {
     
       </div>
       <button className="btn-3 bg-purple-700 text-white">Apply On Devfolio</button>
-      <div className="hider bg-[#00040f] w-[100%] h-[40px]"></div>
+      <div className="hider bg-[#00040f] w-[150px] h-[40px]"></div>
     </main>
   );
 }
