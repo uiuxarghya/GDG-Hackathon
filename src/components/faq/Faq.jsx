@@ -31,7 +31,7 @@ const Faq = () => {
       answer: "You can register for the hackathon on our website. The registration deadline is February 1st."
     },
     {
-      question: "What is the venue for Status Code 1?",
+      question: "What is the venue for GDG Hackathon?",
       answer: "The hackathon will be held at the Sheraton Grand Hotel in downtown."
     },
     {

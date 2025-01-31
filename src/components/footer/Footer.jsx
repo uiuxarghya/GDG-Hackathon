@@ -1,46 +1,95 @@
-import React from 'react';
-import '../css/footer.css';
-import { Mail, Phone, MessageSquare } from 'lucide-react';
+import Logo from '../../assets/images/logo.png'
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
-const Contact = () => {
+export default function Footer() {
   return (
-    <div className="contact-container">
-      <div className="contact-header">
-        <h1 className="title">Connect <span className='text-purple-600'>With Us</span></h1>
-        <div className="divider-container">
-          <hr className="divider" />
+    <div className="footer mt-24">
+      <div className="footer-line w-[60%] h-[1px] ml-72 bg-purple-400"></div>
+      <div className="footer-content flex flex-row">
+        <div className="footer-image ml-36">
+        <img src={Logo} alt='Not Found' className='w-[200px] mt-12'></img>
         </div>
-        <h2 className="subtitle">CONTACT US!</h2>
-        
+        <div className="footer-links ml-80">
+          <div className="footer-links-content mt-20 flex flex-col justify-center ">
+            <div className="font-bold text-purple-700 text-2xl">Quick Links</div>
+            <a
+              href="/about"
+              className="-ml-2 mt-6 px-2 text-sm font-medium text-white transition duration-75 ease-in hover:text-blue-500"
+            >
+              About Us
+            </a>
+            <a
+              href="/teams"
+              className="-ml-2 px-2 text-sm font-medium text-white transition duration-75 ease-in hover:text-blue-500"
+            >
+              Timeline
+            </a>
+            <a
+              href="/events"
+              className="-ml-2 px-2 text-sm font-medium text-white transition duration-75 ease-in hover:text-blue-500"
+            >
+              Tracks
+            </a>
+            <a
+              href="/blogs"
+              className="-ml-2 px-2 text-sm font-medium text-white transition duration-75 ease-in hover:text-blue-500"
+            >
+              Sponsors
+            </a>
+            <a
+              href="/contact"
+              className="-ml-2 px-2 text-sm font-medium text-white transition duration-75 ease-in hover:text-blue-500"
+            >
+              Prizes
+            </a>
+            <a
+              href="/contact"
+              className="-ml-2 px-2 text-sm font-medium text-white transition duration-75 ease-in hover:text-blue-500"
+            >
+              Judges 
+            </a>
+          </div>
+        </div>
+        <div className="footer-links ml-96">
+          <div className="footer-links-content mt-20 flex flex-col justify-center">
+            <div className="font-bold text-white text-2xl">Socials</div>
+            <div className="-ml-2 mt-4 flex flex-row">
+              <a
+                href="/about"
+                className="text-2xl px-2 font-medium text-purple-700 transition duration-75 ease-in hover:text-blue-500"
+              >
+                <FaXTwitter />
+              </a>
+              <a
+                href="/teams"
+                className="text-2xl px-2 font-medium text-purple-700 transition duration-75 ease-in hover:text-blue-500"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="/events"
+                className="text-2xl px-2 font-medium text-purple-700 transition duration-75 ease-in hover:text-blue-500"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="/blogs"
+                className="text-2xl px-2 font-medium text-purple-700 transition duration-75 ease-in hover:text-blue-500"
+              >
+                <FaYoutube />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="contact-cards">
-        <div className="contact-card">
-          <div className="card-header">
-            <h3>DROP A MAIL</h3>
-            <Mail className="icon" color="purple" size={32} />
-          </div>
-          <button className="contact-button">MAIL US</button>
-        </div>
-
-        <div className="contact-card">
-          <div className="card-header">
-            <h3>CATCH A CALL</h3>
-            <Phone className="icon" color="purple" size={32} />
-          </div>
-          <button className="contact-button">CALL US</button>
-        </div>
-
-        <div className="contact-card">
-          <div className="card-header">
-            <h3>JOIN OUR DISCORD</h3>
-            <MessageSquare className="icon" color="purple" size={32} />
-          </div>
-          <button className="contact-button">LET'S CHAT</button>
-        </div>
+      <div className="footer-rights mb-6 mt-8">
+        <p className=" text-center text-sm font-light text-gray-500">
+          Made with <span className="text-red-600">❤</span> , Made for GDG On Campus TMSL Hackathon
+        </p>
       </div>
     </div>
   );
-};
-
-export default Contact;
+}
