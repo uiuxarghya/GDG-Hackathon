@@ -12,6 +12,7 @@ import Prizes from './components/prizes/prizes'
 import Judges from './components/judges/judges'
 import Mentors from './components/mentors/mentors'
 import Faq from "./components/faq/Faq";
+import Community from "./components/community/community";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Prizes/>
       <Judges/>
       <Mentors/>
+      <Community />
       <Faq />
       <Footer />
     </div>
