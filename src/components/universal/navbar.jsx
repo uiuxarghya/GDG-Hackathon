@@ -50,22 +50,28 @@ const Navbar = () => {
         </div>
         <div className="navbar-links">
           <li>
-            <a href="/about">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Tracks</a>
+            <a href="#timeline">Timeline</a>
           </li>
           <li>
-            <a href="#">Timeline</a>
+            <a href="#tracks">Tracks</a>
           </li>
           <li>
-            <a href="#">Sponsors</a>
+            <a href="#sponsors">Sponsors</a>
           </li>
           <li>
-            <a href="#">Prizes</a>
+            <a href="#prizes">Prizes</a>
           </li>
           <li>
-            <a href="#">FAQ's</a>
+            <a href="#judges">Judges</a>
+          </li>
+          <li>
+            <a href="#mentors">Mentors</a>
+          </li>
+          <li>
+            <a href="#footer">FAQ's</a>
           </li>
         </div>
         <div className="navbar-auths">

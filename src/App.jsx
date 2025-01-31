@@ -11,6 +11,7 @@ import Sponsors from './components/sponsors/sponsors'
 import Prizes from './components/prizes/prizes'
 import Judges from './components/judges/judges'
 import Mentors from './components/mentors/mentors'
+import Community from './components/community/community'
 
 function App() {
   return (
@@ -18,16 +19,19 @@ function App() {
 
       <ParticlesComponent id="particles" />
       <Navbar />
+      <main>
       <Landing />
-      <About />
+      <About id="about" />
       <Hero />
-      <Timeline />
-      <Tracks />
-      <Sponsors />
-      <Prizes/>
-      <Judges/>
-      <Mentors/>
-      <Footer />
+      <Timeline id="timeline"/>
+      <Tracks id="tracks"/>
+      <Sponsors id="sponsors"/>
+      <Prizes id="prizes"/>
+      <Judges id="judges"/>
+      <Mentors id="mentors"/>
+      <Community id="community"/>
+      <Footer id="footer"/>
+      </main>
     </div>
   );
 }
