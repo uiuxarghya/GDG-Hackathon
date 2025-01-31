@@ -9,6 +9,8 @@ import Footer from "./components/footer/Footer";
 import About from './components/home/about'
 import Sponsors from './components/sponsors/sponsors'
 import Prizes from './components/prizes/prizes'
+import Judges from './components/judges/judges'
+import Mentors from './components/mentors/mentors'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Tracks />
       <Sponsors />
       <Prizes/>
+      <Judges/>
+      <Mentors/>
       <Footer />
     </div>
   );
