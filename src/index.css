@@ -150,23 +150,6 @@ body {
   margin-left: 150px;
 }
 
-.btn-1 {
-  width: 90px;
-  height: 30px;
-  color: rgba(245, 245, 245, 0.827);
-  border-radius: 6px;
-  border: 1px solid rgba(128, 128, 128, 0.274);
-  text-align: center;
-  align-content: center;
-  align-items: center;
-  margin-right: 16px;
-  transition: all 0.5s ease;
-}
-.btn-1:hover{
-  color: gray;
-  border: 1px solid rgba(128, 128, 128, 0.674);
-}
-
 .btn-2 {
   width: 120px;
   height: 30px;
@@ -215,4 +198,9 @@ body {
   font-weight: 500;
   font-size: 1.2rem;
 
+}
+.hider {
+  position: absolute;
+  top : 765px;
+  left:0px;
 }
