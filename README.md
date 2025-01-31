@@ -6,6 +6,7 @@
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [Vercel](https://vercel.com/docs)
 - [Acernity UI](https://ui.aceternity.com/components)
+- [Spline](https://spline.design/)
 
 ## Getting Started
 
