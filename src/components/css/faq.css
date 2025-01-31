@@ -1,5 +1,5 @@
 .faq-container {
-    background-color: #000;
+   
     color: #fff;
     padding: 4rem 2rem;
     
@@ -15,16 +15,20 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
   
   .faq-item {
     border: 1px solid #fff;
     border-radius: 0.5rem;
     overflow: hidden;
+    width:75%;
   }
   
   .faq-question {
-    background-color: #1d252d;
+    background-color: #00040f;
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -45,7 +49,7 @@
   .faq-answer {
     padding: 1rem 1.5rem;
     align-items: start;
-    background: linear-gradient(to bottom, #c8bde1, #c19bad);
+    background: linear-gradient(to bottom, #c8bde1, #8705de);
   }
   
   .faq-answer p {

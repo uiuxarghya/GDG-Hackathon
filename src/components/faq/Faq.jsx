@@ -52,7 +52,7 @@ const Faq = () => {
       <div className="faq-items">
         {faqs.map((faq, index) => (
           <div key={index} className="faq-item">
-            <div className="faq-question flex justify-between items-center" onClick={() => toggleAnswer(index)}>
+            <div className="faq-question flex justify-between items-center " onClick={() => toggleAnswer(index)}>
               <h3>{faq.question}</h3>
               <div className="faq-icons flex items-center gap-2">
                 {openIndex === index ? (
