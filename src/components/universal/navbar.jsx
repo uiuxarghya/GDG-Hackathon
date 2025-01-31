@@ -1,16 +1,48 @@
-import React from "react";
-import Logo from '../../assets/images/logo.png'
+import React, { useEffect, useState } from "react";
+import Logo from "../../assets/images/logo.png";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import { SiLinkedin } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import "../css/navbar.css"
+import "../css/navbar.css";
 
 const Navbar = () => {
-  
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const navbar = document.querySelector(".navbar");
+
+    const handleMouseMove = (e) => {
+      if (!navbar) return;
+      const rect = navbar.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      setCursorPos({ x, y });
+    };
+
+    if (navbar) {
+      navbar.addEventListener("mousemove", handleMouseMove);
+      navbar.addEventListener("mouseenter", () => setIsHovered(true));
+      navbar.addEventListener("mouseleave", () => setIsHovered(false));
+    }
+
+    return () => {
+      if (navbar) {
+        navbar.removeEventListener("mousemove", handleMouseMove);
+      }
+    };
+  }, []);
 
   return (
     <div className="navbar">
+      {isHovered && (
+        <div
+          className="cursor"
+          style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}
+        />
+      )}
       <div className="navbar-box">
         <div className="navbar-logo-section">
           <a href="/">GDG </a>
@@ -21,26 +53,34 @@ const Navbar = () => {
             <a href="/docs">About</a>
           </li>
           <li>
-            <a href="/gamification">Tracks</a>
+            <a href="#">Tracks</a>
           </li>
           <li>
-            <a href="/truthmate">Timeline</a>
+            <a href="#">Timeline</a>
           </li>
           <li>
-            <a href="/news">Sponsors</a>
+            <a href="#">Sponsors</a>
           </li>
           <li>
-            <a href="/news">Prizes</a>
+            <a href="#">Prizes</a>
           </li>
           <li>
-            <a href="/news">FAQ's</a>
+            <a href="#">FAQ's</a>
           </li>
         </div>
         <div className="navbar-auths">
-          <a href="" className=" m-2 text-white  hover:text-purple-500 transition-all ease-in"><FiGithub/></a>
-          <a href="" className=" m-2 text-white  hover:text-purple-500 transition-all ease-in"><SiLinkedin/></a>
-          <a href="" className=" m-2 text-white  hover:text-purple-500 transition-all ease-in"><FaXTwitter/></a>
-          <a hrefLang="" className=" m-2 text-white hover:text-purple-500 transition-all ease-in"><IoLogoInstagram/></a>
+          <a href="" className="m-2 text-white hover:text-gray-800 transition-all ease-in">
+            <FiGithub />
+          </a>
+          <a href="" className="m-2 text-white hover:text-blue-600 transition-all ease-in">
+            <SiLinkedin />
+          </a>
+          <a href="" className="m-2 text-white hover:text-gray-800 transition-all ease-in">
+            <FaXTwitter />
+          </a>
+          <a href="" className="m-2 text-white hover:text-pink-400 transition-all ease-in">
+            <IoLogoInstagram />
+          </a>
         </div>
       </div>
     </div>
