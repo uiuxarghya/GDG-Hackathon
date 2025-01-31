@@ -7,6 +7,7 @@
 - [Vercel](https://vercel.com/docs)
 - [Acernity UI](https://ui.aceternity.com/components)
 - [Spline](https://spline.design/)
+- [Particle JS](https://particles.js.org/)
 
 ## Getting Started
 
