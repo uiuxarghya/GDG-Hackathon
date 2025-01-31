@@ -35,7 +35,7 @@ const Hero = () => {
   
     return (
       <div className="hero-container">
-        <h1 className="hero-title">Event Starting In</h1>
+        <h1 className="hero-title">Event <span className="text-purple-600">Starting In</span></h1>
         <p className="hero-subtitle">Don't miss out on the excitement!</p>
   
         <div className="countdown-container">

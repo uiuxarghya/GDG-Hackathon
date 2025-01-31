@@ -6,12 +6,12 @@ export default function About() {
     <> 
     
      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-     <h1 className="text-center text-4xl sm:text-5xl font-bold mb-12 text-white">ABOUT US</h1>   
+     <h1 className="text-center text-4xl sm:text-5xl font-bold mb-12 text-white">ABOUT <span className="text-purple-600">US</span></h1>   
      <div className="grid grid-cols-1 lg:divide-x-2 lg:grid-cols-2 gap-6 items-center lg:space-x-3">  
      <div className="space-y-4 lg:-mx-3">
      <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight">
         <span className="block font-mono font-bold text-white">GDG </span>
-         <span className="block font-sans font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#5C24FF] to-[#D94FD5]">//HACKATHON//</span></h2>
+         <span className="block font-sans font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#5C24FF] to-[#D94FD5]">HACKATHON</span></h2>
          </div>
          <div className="space-y-6 text-base sm:text-lg lg:px-5">
         <p className="text-white text-lg text-justify leading-relaxed">
