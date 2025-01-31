@@ -1,4 +1,6 @@
-
+.container {
+  margin-left: 120px;
+}
 
 .timeline ul li {
   list-style-type: none;
