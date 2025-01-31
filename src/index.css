@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/*fonts section*/
+
 
 @layer base {
   :root {
@@ -61,13 +63,26 @@
   }
 }
 
-/*navbar*/
+
+.App {
+  text-align: center;
+}
+
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
 body {
   background-color: #00040f;
   width: 100%;
   height: auto;
   font-family: "Poppins", sans-serif;
 }
+<<<<<<< HEAD
 .testanomial-icon{
   border: 1px solid gray;
 }
@@ -204,3 +219,5 @@ body {
   top : 765px;
   left:0px;
 }
+=======
+>>>>>>> 39ac5168a9ebc53ec6b71da83441680f376cdf1d
