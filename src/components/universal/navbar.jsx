@@ -4,6 +4,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import { SiLinkedin } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
+import "../css/navbar.css"
 
 const Navbar = () => {
   
