@@ -8,6 +8,7 @@ import Tracks from './components/tracks/tracks';
 import Footer from "./components/footer/Footer";
 import About from './components/home/about'
 import Sponsors from './components/sponsors/sponsors'
+import Prizes from './components/prizes/prizes'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Timeline />
       <Tracks />
       <Sponsors />
+      <Prizes/>
       <Footer />
     </div>
   );
