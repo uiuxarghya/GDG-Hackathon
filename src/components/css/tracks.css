@@ -1,0 +1,11 @@
+.track-card {
+  
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(128, 0, 128, 0.8); /* Purple glow */
+  border: 1px solid rgba(128, 0, 128, 0.5); /* Semi-transparent purple border */
+  transition: box-shadow 0.3s ease-in-out;
+}
+.track-card:hover {
+  box-shadow: 0 0 15px rgba(128, 0, 128, 1); /* Stronger glow on hover */
+
+}
