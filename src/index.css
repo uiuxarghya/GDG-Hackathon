@@ -82,5 +82,10 @@ body {
   height: auto;
   font-family: "Poppins", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+main {
+  overflow-y: auto;
+}
 
