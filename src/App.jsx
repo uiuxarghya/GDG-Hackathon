@@ -1,6 +1,7 @@
 import React from "react"
 import Landing from './components/home/Landing'
 import Navbar from './components/universal/navbar'
+import Hero from "./components/hero/Hero"
 import ParticlesComponent from "./components/universal/particles"
 function App() {
   
@@ -11,6 +12,8 @@ function App() {
       <ParticlesComponent id="particles" />
       <Navbar/>
       <Landing/>
+      
+      <Hero />
     </div>
   )
 }
