@@ -11,6 +11,7 @@ import Sponsors from './components/sponsors/sponsors'
 import Prizes from './components/prizes/prizes'
 import Judges from './components/judges/judges'
 import Mentors from './components/mentors/mentors'
+import Faq from "./components/faq/Faq";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Prizes/>
       <Judges/>
       <Mentors/>
+      <Faq />
       <Footer />
     </div>
   );
