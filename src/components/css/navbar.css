@@ -8,7 +8,7 @@
     align-content: center;
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.2); 
-    height: 50px;
+    height: 4.5rem;
     margin-top: 15px;
     margin-left: 75px;
     color: gray;
@@ -16,6 +16,9 @@
     backdrop-filter: blur(7px); 
     -webkit-backdrop-filter: blur(10px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    font-weight: 600;
+    font-size: larger;
 }
 
   .navbar-logo-section img {
@@ -58,9 +61,12 @@
     transition: all 0.5s ease-in;
     font-size: 500;
     color:rgba(255, 255, 255, 0.778) ;
+    font-size: large;
+    transform: scale(1.2);
   }
   .navbar-links a:hover {
-    color: gray;
+    color: rgb(82, 81, 81);
+    transition: transform 0.2s ease-in-out;
   }
   
   .navbar-links {
@@ -71,7 +77,10 @@
     align-content: center;
     flex-direction: row;
     margin-left: 250px;
+    
+    
   }
+
   .navbar-auths {
     width: 30%;
     display: flex;
@@ -82,3 +91,27 @@
     padding: 12px 12px;
     margin-left: 150px;
   }
+
+/* custom cursor effect */
+.cursor {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, rgb(235, 95, 220), rgb(179, 60, 255), rgb(110, 10, 250));
+  background-size: 300% 300%;
+  animation: vibrantGradient 6s ease infinite;
+  border: 2px solid purple;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.03s ease-out;
+  mix-blend-mode: difference;
+  will-change: transform;
+  z-index: -1;
+}
+
+@keyframes vibrantGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
