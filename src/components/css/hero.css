@@ -38,7 +38,7 @@
     font-weight: bold;
     background: linear-gradient(to right, #7360a3, #fcb0d3);
     -webkit-background-clip: text;
-    color: transparent; /* Ensures text color is transparent to show the gradient */
+    color: transparent;
   }
   
   

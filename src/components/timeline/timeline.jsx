@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-import '../css/timeline.css'
+import '../css/timeline.css';
 
 const Timeline = () => {
   const timelineData = [
