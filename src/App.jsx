@@ -14,10 +14,12 @@ import Mentors from './components/mentors/mentors'
 import Faq from "./components/faq/Faq";
 import Community from "./components/community/community";
 
+
+
 function App() {
   return (
     <div className="App">
-
+     
       <ParticlesComponent id="particles" />
       <Navbar />
       <Landing />
@@ -32,6 +34,7 @@ function App() {
       <Community />
       <Faq />
       <Footer />
+    
     </div>
   );
 }
