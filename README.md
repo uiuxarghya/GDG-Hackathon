@@ -8,6 +8,7 @@
 - [Acernity UI](https://ui.aceternity.com/components)
 - [Spline](https://spline.design/)
 - [Particle JS](https://particles.js.org/)
+- [EmailJS](https://www.emailjs.com/)
 
 ## Getting Started
 
