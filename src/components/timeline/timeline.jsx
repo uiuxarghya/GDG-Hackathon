@@ -70,7 +70,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container ml-25">
       <h1 className="text-5xl text-white text-center mb-12 mt-12 font-bold">Event <span className="text-purple-700">Timeline</span></h1>
       <section className="timeline mb-20">
         <ul>
