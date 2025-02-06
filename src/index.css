@@ -92,3 +92,6 @@ main {
 .footer-links a {
   text-align: left;
 }
+.contact-border {
+  border: 1px solid rgb(216, 114, 216);
+}
