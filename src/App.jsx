@@ -3,7 +3,7 @@ import Landing from './components/home/Landing';
 import Navbar from './components/universal/navbar';
 import Hero from "./components/hero/Hero";
 import ParticlesComponent from "./components/universal/particles";
-import Timeline from "./components/timeline/timeline";
+// import Timeline from "./components/timeline/timeline";
 import Tracks from './components/tracks/tracks';
 import Footer from "./components/footer/Footer";
 import About from './components/home/about'
@@ -13,6 +13,7 @@ import Judges from './components/judges/judges'
 import Mentors from './components/mentors/mentors'
 import Faq from "./components/faq/Faq";
 import Community from "./components/contact/community";
+import Eventtimeline from "./components/timeline/eventtimeline";
 
 
 
@@ -25,7 +26,8 @@ function App() {
       <Landing />
       <About />
       <Hero />
-      <Timeline />
+      {/* <Timeline /> */}
+      <Eventtimeline />
       <Tracks />
       <Sponsors />
       <Prizes/>

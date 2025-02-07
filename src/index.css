@@ -89,6 +89,10 @@ main {
   overflow-y: auto;
 }
 
+body {
+  max-width: 100%;
+}
+
 .footer-links a {
   text-align: left;
 }
