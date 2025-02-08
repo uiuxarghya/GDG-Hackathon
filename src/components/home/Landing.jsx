@@ -5,9 +5,18 @@ import "../css/landing.css";
 export default function Home() {
   return (
     <main>
-      <Spline className=" h-[200px]"
-        scene="https://prod.spline.design/RnUyvM4a9P5gpJiG/scene.splinecode" 
-      />
+     <div className="relative w-full h-screen">
+      {/* Wrapper div for aspect ratio and responsive sizing */}
+      <div className="absolute inset-0">
+        {/* Mobile-first design with responsive height adjustments */}
+        <div className="w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">
+          <Spline
+            className="w-full h-full object-contain"
+            scene="https://prod.spline.design/RnUyvM4a9P5gpJiG/scene.splinecode"
+          />
+        </div>
+      </div>
+    </div>
       <div className="hero-text ml-5">
       <h1 className=" text-white text-5xl font-bold">Unleash Your Creativity </h1>
       <p className=" text-[#eeeeee9f]">Where Innovation Meets Execution</p>
