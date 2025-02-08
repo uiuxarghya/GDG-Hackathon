@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from '../ui/canvas-reveal-effect'
 export default function CanvasRevealEffectDemo() {
   return (<>
     <div>
-      <h1 className=" text-5xl text-center text-white font-bold">Explore <span className="text-purple-600">Tracks</span></h1>
+      <h1 className="track-heading mt-24 text-5xl text-center text-white font-bold">Explore <span className="text-purple-600">Tracks</span></h1>
     </div>
     <div
       className="py-12 flex  flex-wrap flex-row items-center justify-center  w-full gap-4 mx-auto px-8">

@@ -9,3 +9,9 @@
   box-shadow: 0 0 15px rgba(128, 0, 128, 1); /* Stronger glow on hover */
 
 }
+@media screen and (max-width: 768px) {
+  .track-heading {
+    font-size: 2.5rem;
+    margin-top: 25px;
+  }
+}

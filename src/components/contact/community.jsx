@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Spline from '@splinetool/react-spline';
 import emailjs from "@emailjs/browser";
+import '../css/contact.css'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,7 +51,7 @@ export default function Contact() {
         {/* Responsive Layout */}
         <div className="flex flex-col items-center justify-center mt-8 md:flex-row">
           {/* Globe on Mobile: Appears Above Form */}
-          <div className="w-full h-[500px] md:w-auto mb-8 md:mb-0">
+          <div className="w-full h-[500px] md:w-auto mb-8 md:mb-0 contact-spline">
             <Spline scene="https://prod.spline.design/r7TkSVnOuOX-InjO/scene.splinecode" />
           </div>
 
