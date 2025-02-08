@@ -5,7 +5,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import { SiLinkedin } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { GiHamburgerMenu } from "react-icons/gi"; // Hamburger Icon
+import { GiHamburgerMenu } from "react-icons/gi"; 
 import "../css/navbar.css";
 
 const hamburgerData = ["About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", "FAQ's"];

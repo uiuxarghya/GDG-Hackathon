@@ -20,7 +20,7 @@ import Eventtimeline from "./components/timeline/eventtimeline";
 function App() {
   return (
     <div className="App">
-     
+ 
       <ParticlesComponent id="particles" />
       <Navbar />
       <Landing />

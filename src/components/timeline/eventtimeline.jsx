@@ -2,99 +2,39 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 const timelineData = [
-    {
-        title: "Registration Begins - February 15, 2025",
-        content: (
-          <p className="text-gray-600">
-            Start your journey by signing up for the GDG Hackathon. Don't miss this chance to showcase your skills!
-          </p>
-        )
-      },
-      {
-        title: "Registration Ends - March 15, 2025",
-        content: (
-          <p className="text-gray-600">
-            Ensure your team has completed registration before the deadline. Late entries won't be accepted.
-          </p>
-        )
-      },
-      {
-        title: "Idea Submission - March 20, 2025 - March 25, 2025",
-        content: (
-          <p className="text-gray-600">
-            Submit your innovative idea online. Shortlisted teams will advance to the next round.
-          </p>
-        )
-      },
-      {
-        title: "Finalists Announced - March 27, 2025",
-        content: (
-          <p className="text-gray-600">
-            The list of selected teams for the final hackathon will be revealed. Stay tuned!
-          </p>
-        )
-      },
-      {
-        title: "Hackathon Begins - April 1, 2025",
-        content: (
-          <p className="text-gray-600">
-            The 36-hour coding marathon kicks off. Innovate, create, and build your best projects.
-          </p>
-        )
-      },
-      {
-        title: "Project Submission Deadline - April 2, 2025",
-        content: (
-          <p className="text-gray-600">
-            All projects must be submitted via Devfolio for evaluation. Ensure you meet all criteria.
-          </p>
-        )
-      },
-      {
-        title: "Award Ceremony & Wrap-Up - April 2, 2025",
-        content: (
-          <p className="text-gray-600">
-            Celebrate the achievements of participants and winners. May the best team win!
-          </p>
-        )
-      }
+  { title: "Registration Begins - February 15, 2025", content: "Start your journey by signing up for the GDG Hackathon. Don't miss this chance to showcase your skills!" },
+  { title: "Registration Ends - March 15, 2025", content: "Ensure your team has completed registration before the deadline. Late entries won't be accepted." },
+  { title: "Idea Submission - March 20, 2025 - March 25, 2025", content: "Submit your innovative idea online. Shortlisted teams will advance to the next round." },
+  { title: "Finalists Announced - March 27, 2025", content: "The list of selected teams for the final hackathon will be revealed. Stay tuned!" },
+  { title: "Hackathon Begins - April 1, 2025", content: "The 36-hour coding marathon kicks off. Innovate, create, and build your best projects." },
+  { title: "Project Submission Deadline - April 2, 2025", content: "All projects must be submitted via Devfolio for evaluation. Ensure you meet all criteria." },
+  { title: "Award Ceremony & Wrap-Up - April 2, 2025", content: "Celebrate the achievements of participants and winners. May the best team win!" },
 ];
 
 const EventTimeline = () => {
   const ref = useRef(null);
-  const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
+      setHeight(ref.current.getBoundingClientRect().height);
     }
-  }, [ref]);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
-    smooth: 10
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <motion.div 
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <motion.div className="w-full font-sans md:px-10 bg-transparent">
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <div className="p-5 bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-lg shadow-lg">
-        <h1 className="text-5xl text-white text-center mb-12 mt-12 ml-10 font-bold">Event <span className="text-purple-700">Timeline</span></h1>
-          <p className="text-neutral-600 ml-100 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-           <i>Follow the journey from registration to the final award ceremony.</i> 
-          </p>
-        </div>
+        <h1 className="text-5xl text-center mb-12 font-bold">
+          Event <span className="text-purple-700">Timeline</span>
+        </h1>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {timelineData.map((item, index) => (
@@ -108,7 +48,7 @@ const EventTimeline = () => {
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <motion.div 
-                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center"
+                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center"
                 whileInView={{ scale: [0, 1] }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -119,27 +59,23 @@ const EventTimeline = () => {
                 {item.title}
               </h3>
             </div>
-
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <div className="p-5 bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-lg shadow-lg">
+              <div className="p-5 bg-white/80 dark:bg-black/40 backdrop-blur-md rounded-lg shadow-lg">
                 <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                   {item.title}
                 </h3>
-                {item.content}
+                <p className="text-gray-600">{item.content}</p>
               </div>
             </div>
           </motion.div>
         ))}
         <div
           style={{ height: `${height}px` }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-gradient-to-b from-transparent via-neutral-200 dark:via-neutral-700 to-transparent"
         >
           <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            style={{ height: heightTransform, opacity: opacityTransform }}
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent rounded-full"
           />
         </div>
       </div>
