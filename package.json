@@ -19,7 +19,7 @@
     "@splinetool/react-spline": "^4.0.0",
     "@tabler/icons-react": "^3.30.0",
     "@tailwindcss/vite": "^4.0.1",
-    "@tsparticles/all": "^3.8.0",
+    "@tsparticles/all": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
