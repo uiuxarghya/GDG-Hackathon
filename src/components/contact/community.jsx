@@ -41,22 +41,24 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-transparent">
-      <div className="container px-6 py-12 mx-auto">
+    <section className="bg-transparent px-6 py-12">
+      <div className="container mx-auto">
         <div>
-          <p className="font-bold text-5xl text-purple-700">Contact us</p>
+          <p className="font-bold text-5xl text-purple-700 text-center">Contact us</p>
         </div>
 
-        <div className="flex flex-row justify-center align-middle items-center">
-          <div>
-            <main>
-              <Spline scene="https://prod.spline.design/r7TkSVnOuOX-InjO/scene.splinecode" />
-            </main>
+        {/* Responsive Layout */}
+        <div className="flex flex-col items-center justify-center mt-8 md:flex-row">
+          {/* Globe on Mobile: Appears Above Form */}
+          <div className="w-full h-[500px] md:w-auto mb-8 md:mb-0">
+            <Spline scene="https://prod.spline.design/r7TkSVnOuOX-InjO/scene.splinecode" />
           </div>
-          <div className="p-4 py-6 rounded-lg bg-transparent md:p-8 w-[50%] -ml-48 mr-32">
+
+          {/* Form */}
+          <div className="w-full max-w-lg p-6 rounded-lg bg-transparent">
             <form onSubmit={handleSubmit}>
-              <div className="-mx-2 md:items-center md:flex mt-8">
-                <div className="flex-1 px-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div>
                   <label className="block mb-2 text-md text-start text-gray-200">First Name</label>
                   <input
                     type="text"
@@ -69,7 +71,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="flex-1 px-2 mt-4 md:mt-0">
+                <div>
                   <label className="block mb-2 text-md text-start text-gray-200">Last Name</label>
                   <input
                     type="text"
