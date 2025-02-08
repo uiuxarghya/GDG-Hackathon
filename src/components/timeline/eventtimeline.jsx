@@ -32,7 +32,7 @@ const EventTimeline = () => {
   return (
     <motion.div className="w-full font-sans md:px-10 bg-transparent">
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h1 className="text-5xl text-center mb-12 font-bold">
+        <h1 className="text-5xl text-center text-white mb-12 font-bold">
           Event <span className="text-purple-700">Timeline</span>
         </h1>
       </div>
