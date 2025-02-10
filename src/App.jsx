@@ -12,6 +12,7 @@ import Judges from "./components/judges/judges";
 import Mentors from "./components/mentors/mentors";
 import Faq from "./components/faq/Faq";
 import Timeline from "./components/timeline/timeline";
+import Contact from "./components/contact/community";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
           <section id="prizes"><Prizes /></section>
           <section id="judges"><Judges /></section>
           <section id="mentors"><Mentors /></section>
+          <section id="contact"><Contact/></section>
           <section id="faqs"><Faq /></section>
           <Footer />
         </>

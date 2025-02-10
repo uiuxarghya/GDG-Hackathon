@@ -20,7 +20,7 @@ export default function About() {
             </div>
           </h2>
           <img src={Logo} alt="Not Found" className="w-[300px] mt-6 lg:mt-0" />
-          <button className="btn-4 ml-5 mt-6 bg-purple-700 text-white px-4 py-2 rounded-md">
+          <button className="btn-discord ml-16 mt-2 bg-purple-700 text-white px-4 py-2 rounded-md">
             Join Our Discord
           </button>
         </div>

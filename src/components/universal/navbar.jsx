@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi"; 
 import "../css/navbar.css";
 
-const navbarItems = ["Home", "About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", "FAQs"];
+const navbarItems = ["Home", "About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", ,"Contact" , "FAQs"];
 
 const Navbar = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -72,9 +72,7 @@ const Navbar = () => {
           <div className="navbar-box">
             {/* Logo Section */}
             <div className="navbar-logo-section">
-              <ScrollLink to="home" smooth={true} duration={500} offset={-80} className="text-lg font-bold cursor-pointer">
-                GDG TMSL
-              </ScrollLink>
+              <a href="/" className="text-lg font-bold">GDG TMSL</a>
               <img src={Logo} alt="Logo" className="w-10 h-10 ml-2" />
             </div>
 

@@ -56,7 +56,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="w-full max-w-lg p-6 rounded-lg bg-transparent">
+          <div className="w-full max-w-lg p-6 rounded-lg bg-transparent ml-40">
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <div>
