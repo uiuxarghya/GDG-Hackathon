@@ -102,7 +102,7 @@
 .qr-code {
   width: 100px;
   height: 100px;
-  background: whitesmoke;
+  background: transparent;
   margin: 1rem auto;
 }
 

@@ -1,4 +1,5 @@
 import React, {  useState, useEffect } from "react";
+import QrCode from "../../assets/images/qr.png";
 import "../css/hero.css"
 
 const Hero = () => {
@@ -75,8 +76,8 @@ const Hero = () => {
   
         <div className="whatsapp-section">
           <p>Join our Whatsapp Community for further updates.</p>
-          <div className="qr-code"></div>
-          <p>Or click <a href="#" className="here-link">here</a>.</p>
+          <img src={QrCode} className="qr-code"></img>
+          <p>Or click <a href="https://chat.whatsapp.com/C6nl109OqZFH0d6ffVBHCY" className="here-link">here</a>.</p>
         </div>
       </div>
       </div>

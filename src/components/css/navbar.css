@@ -93,81 +93,66 @@
 }
 /* hamburger menu css*/
 
-.hamburger-menu {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-size: 28px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1100;
-}
-
-/* Mobile Menu (Sliding Animation + Glassmorphism) */
+/* Enable Scroll on Mobile Menu */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 60%;
-  height: 45vh; /* Adjusted to make the menu more spacious */
-  background: rgba(255, 255, 255, 0.1); /* Glassmorphic effect */
-  backdrop-filter: blur(12px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  width: 70%; /* Widened the menu */
+  height: 55vh; /* Increased height for better visibility */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; /* Evenly spaced items */
   align-items: center;
   z-index: 1000;
-  padding: 20px;
-  overflow: hidden;
+  padding: 25px;
+  overflow-y: auto; /* Enable scrolling */
+  max-height: 90vh;
 }
 
-/* Close Button */
+/* Close Button Styling */
 .close-menu {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
+  top: 12px;
+  right: 20px; /* Moved to the extreme top right */
+  font-size: 28px; /* Increased size */
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(179, 60, 255);
   border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
+  padding: 8px 16px; /* Widened button */
+  border-radius: 8px;
   color: white;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .close-menu:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
 }
 
-/* Mobile Menu Links */
+/* Make the menu text larger, bolder, and white */
 .mobile-menu-links {
-  list-style: none;
-  padding: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  gap: 5px; /* Added space between links */
+  gap: 12px;
+  width: 100%;
+  padding: 15px 0;
 }
 
-/* Individual Link Items */
+/* Style Individual Link Items */
 .mobile-menu-links li {
   width: 100%;
   text-align: center;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border between links */
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Remove Border from Last Link */
+/* Remove border from last item */
 .mobile-menu-links li:last-child {
   border-bottom: none;
 }
@@ -176,22 +161,28 @@
 .mobile-menu-links a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px; /* Made text larger */
+  font-weight: 700; /* Made text bolder */
   transition: 0.3s ease-in-out;
 }
 
 .mobile-menu-links a:hover {
   color: #4a90e2;
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
-.mobile-menu {
-  animation: slideIn 0.3s ease forwards;
+/* Scrollbar Customization */
+.mobile-menu::-webkit-scrollbar {
+  width: 6px;
 }
 
-.mobile-menu.hidden {
-  animation: slideOut 0.3s ease forwards;
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Responsive Design */

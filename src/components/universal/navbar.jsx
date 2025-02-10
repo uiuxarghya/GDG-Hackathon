@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link as ScrollLink } from "react-scroll"; // ✅ Use react-scroll instead of react-router-dom
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Logo from "../../assets/images/logo.png";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -8,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi"; 
 import "../css/navbar.css";
 
-const hamburgerData = ["About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", "FAQ's"];
+const navbarItems = ["Home", "About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", "FAQs"];
 
 const Navbar = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -21,12 +22,7 @@ const Navbar = () => {
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current - (scrollYProgress.getPrevious() || 0);
-
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
-      } else {
-        setVisible(direction < 0);
-      }
+      setVisible(scrollYProgress.get() < 0.05 || direction < 0);
     }
   });
 
@@ -34,14 +30,12 @@ const Navbar = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     const navbar = document.querySelector(".navbar");
-
     const handleMouseMove = (e) => {
       if (!navbar) return;
       const rect = navbar.getBoundingClientRect();
@@ -78,7 +72,9 @@ const Navbar = () => {
           <div className="navbar-box">
             {/* Logo Section */}
             <div className="navbar-logo-section">
-              <a href="/" className="text-lg font-bold">GDG</a>
+              <ScrollLink to="home" smooth={true} duration={500} offset={-80} className="text-lg font-bold cursor-pointer">
+                GDG TMSL
+              </ScrollLink>
               <img src={Logo} alt="Logo" className="w-10 h-10 ml-2" />
             </div>
 
@@ -86,11 +82,17 @@ const Navbar = () => {
             {!isMobile && (
               <>
                 <ul className="navbar-links">
-                  {["About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", "FAQ's"].map((item, index) => (
+                  {navbarItems.map((item, index) => (
                     <li key={index}>
-                      <a href={`#${item.toLowerCase()}`} className="hover:text-blue-500 transition">
+                      <ScrollLink 
+                        to={item.toLowerCase()} 
+                        smooth={true} 
+                        duration={500} 
+                        offset={-80} // Adjust for navbar height
+                        className="hover:text-blue-500 transition cursor-pointer"
+                      >
                         {item}
-                      </a>
+                      </ScrollLink>
                     </li>
                   ))}
                 </ul>
@@ -127,11 +129,18 @@ const Navbar = () => {
           >
             <button onClick={() => setMenuOpen(false)} className="close-menu">✖</button>
             <ul className="mobile-menu-links">
-              {hamburgerData.map((item, index) => (
+              {navbarItems.map((item, index) => (
                 <li key={index}>
-                  <a href={`#${item.toLowerCase()}`} className="hover:text-blue-500 transition">
+                  <ScrollLink 
+                    to={item.toLowerCase()} 
+                    smooth={true} 
+                    duration={500} 
+                    offset={-80} 
+                    className="hover:text-blue-500 transition cursor-pointer"
+                    onClick={() => setMenuOpen(false)} // Close menu on click
+                  >
                     {item}
-                  </a>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>
