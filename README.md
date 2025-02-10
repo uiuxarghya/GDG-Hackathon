@@ -18,7 +18,7 @@
     ```bash
     git clone https://github.com/Sapta-Dev27/GDG-Hackathon
 
-    cd gdg-hack
+    cd GDG-Hackathon
     ```
 3. Install dependencies
 
