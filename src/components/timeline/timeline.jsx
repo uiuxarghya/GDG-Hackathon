@@ -6,13 +6,13 @@ const Timeline = () => {
     { 
      
       title: "Registration Opens" ,
-      date : "February 15 , 2025" ,
+      date : "February 23 , 2025" ,
       details : "Begin your journey by registering for GDG Hackathon. Don't miss out on this opportunity to showcase your skills!" ,
     },
     { 
      
       title: "Registration Closes" ,
-      date : "March 15 , 2025" ,
+      date : "March 20 , 2025" ,
       details : "Make sure you have registered for the Hackathon before the Registration Period ends" ,
     },
     { 
@@ -30,18 +30,18 @@ const Timeline = () => {
     { 
      
       title: " Hacking Period Starts" ,
-      date : "April 1 , 2025" ,
+      date : "April 5 , 2025" ,
       details : "The coding marathon begins! Get ready for 36 hours of innovation, creativity, and intense development." ,
     },
     { 
      
       title: " Project Submission" ,
-      date : "April 2 , 2025" ,
+      date : "April 6 , 2025" ,
       details : "Submit your projects via Devfolio and wait for the Judges to evaluate your Project" ,
     },
      {
       title: " Closing Ceremony" ,
-      date : "April 2 , 2025" ,
+      date : "April 6 , 2025" ,
       details : "Submit your projects and prepare for the final presentations. May the best team win!" ,
     },
     

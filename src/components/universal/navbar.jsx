@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi"; 
 import "../css/navbar.css";
 
-const navbarItems = ["Home", "About", "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Mentors", ,"Contact" , "FAQs"];
+const navbarItems = ["Home",  "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Team",  "FAQs"];
 
 const Navbar = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
