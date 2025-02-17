@@ -31,8 +31,8 @@ const Home = () => {
 
         {/* Button Container */}
         <div className="flex flex-col items-center w-full px-4">
-          <button className="bg-purple-700 text-white rounded-md py-2 px-4 w-full max-w-xs md:max-w-sm text-sm md:text-base lg:text-lg">
-            Apply On Devfolio
+          <button className="bg-purple-700 text-white rounded-md py-2 px-4 w-full max-w-xs md:max-w-sm text-md font-semibold">
+            Applications Starting Soon
           </button>
         </div>
 

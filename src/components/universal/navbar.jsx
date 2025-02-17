@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll"; // ✅ Use react-scroll instead of react-router-dom
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/Spectrum1.0.png";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import { SiLinkedin } from "react-icons/si";
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="navbar-box">
             {/* Logo Section */}
             <div className="navbar-logo-section">
-              <a href="/" className="text-lg font-bold">GDG TMSL</a>
+              <a href="/" className="text-lg font-bold">Spectrum 1.0</a>
               <img src={Logo} alt="Logo" className="w-10 h-10 ml-2" />
             </div>
 

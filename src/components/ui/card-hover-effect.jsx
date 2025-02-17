@@ -36,8 +36,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card className="border-[#800080cc]">
-            <CardTitle className="font-bold">{item.title}</CardTitle>
-            <CardDescription className="text-purple-600 text-md font-semibold">{item.description}</CardDescription>
+            <CardTitle className="font-bold text-2xl">{item.title}</CardTitle>
+            <CardDescription className="text-purple-600 text-xl font-semibold">{item.description}</CardDescription>
           </Card>
         </a>
       ))}

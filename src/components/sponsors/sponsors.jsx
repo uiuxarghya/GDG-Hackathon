@@ -17,37 +17,37 @@ export const sponsors = [
   {
     title: "Devfolio",
     description:
-      "Platform Sponsor",
+      "Gold Sponsor",
     link: "https://stripe.com",
   },
   {
-    title: "Polygon",
+    title: "ETH India",
     description:
       "Gold Sponsor",
     link: "https://netflix.com",
   },
   {
-    title: "EthIndia",
+    title: "Sponsor 3",
     description:
-      "Gold Sponsor",
+      "Coming Soon",
     link: "https://google.com",
   },
   {
-    title: "GDG On Campus TMSL",
+    title: "Sponsor 4",
     description:
-      "Venue Partner",
+      "Coming Soon",
     link: "https://meta.com",
   },
   {
-    title: "Sponsor 1",
+    title: "Sponsor 5",
     description:
-      "Description",
+      "Coming Soon",
     link: "https://amazon.com",
   },
   {
-    title: "Sponsor 2",
+    title: "Sponsor 6",
     description:
-      "Description",
+      "Coming Soon",
     link: "https://microsoft.com",
   },
 ];

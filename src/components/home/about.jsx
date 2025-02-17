@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/Spectrum1.0.png'
 
 export default function About() {
   return (
@@ -11,17 +11,17 @@ export default function About() {
         
         {/* Left Section */}
         <div className="flex flex-col items-center lg:items-start">
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-center lg:text-left">
+          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-center lg:text-left mb-8">
             <div className="inline-flex items-center">
-              <span className="font-mono font-bold text-white mr-4 mt-2 ml-2">GDG </span>
+              <span className="font-mono font-bold text-white mr-4 mt-2 ml-2">Spectrum</span>
               <span className="font-sans font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#5C24FF] to-[#D94FD5] ml-2">
-                HACKATHON
+                1.0
               </span>
             </div>
           </h2>
-          <img src={Logo} alt="Not Found" className="w-[300px] mt-6 lg:mt-0" />
-          <button className="btn-discord ml-16 mt-2 bg-purple-700 text-white px-4 py-2 rounded-md">
-            Join Our Discord
+          <img src={Logo} alt="Not Found" className="w-[300px] mt-6 lg:mt-0 mb-8" />
+          <button className="btn-discord ml-8 mt-2 bg-purple-700 text-white px-4 py-2 rounded-md">
+            Join Our Discord Channel
           </button>
         </div>
 
@@ -32,8 +32,8 @@ export default function About() {
             We shall start the journey with an intense round of reasoning and validation with peers, followed by late-night coding and testing.
             Finally, the journey ends with a thorough validation by the best.
             <br /><br />
-            Come along with us on <span className="font-bold text-purple-500">GDG Hackathon</span>, organized by the <span className="font-bold text-purple-500">GDG On Campus TMSL.</span>
-            A <span className="font-bold text-purple-500">36-hour marathon</span> of executing unique ideas. Choose from the seven tracks or create your own under the Slash track and turn your idea into reality.
+            Come along with us on <span className="font-bold text-purple-500">Spectrum 1.0 </span>, organized by the <span className="font-bold text-purple-500">GDG On Campus TMSL . </span>
+             A <span className="font-bold text-purple-500">36-hour marathon</span> of executing unique ideas. Choose from the seven tracks or create your own under the Slash track and turn your idea into reality.
             Get yourself tested beyond limits by the best in the industry.
             <br /><br />
             <span className="text-xl font-semibold text-purple-600">Let's Code, Commit, and Create!</span>

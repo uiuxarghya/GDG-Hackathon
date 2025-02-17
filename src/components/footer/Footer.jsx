@@ -1,4 +1,4 @@
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/Spectrum1.0.png';
 import { FaTwitter, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {

@@ -12,36 +12,33 @@ const Faq = () => {
   const faqs = [
     {
       question: "How many team members do I need?",
-      answer: "You can participate individually or in teams of 3 to 5 members. If you are participating in the hackathon individually and looking for a team, we will help you in connecting to other individual participants to get you a team."
+      answer: "You cannot partcipate individually . You must participate in a Team of minimum of 2 members and maximum of 4 members "
     },
     {
       question: "Will the hackathon be in person or online?",
-      answer: "The hackathon will be held online."
+      answer: "Yes , it a 36hr long in person Hackathon ."
     },
     {
       question: "How much are the participation fees?",
-      answer: "The participation fees are $50 per team."
+      answer: "There are no participation fees for the Hackathon ."
     },
     {
-      question: "What are the prerequisites to participate in this hackathon?",
+      question: "What are the prerequisites to participate in Spectrum 1.0 ?",
       answer: "To participate, you must be a student or a working professional in the technology industry. No prior hackathon experience is required."
     },
     {
       question: "How do I register?",
-      answer: "You can register for the hackathon on our website. The registration deadline is February 1st."
+      answer: "You can register for the hackathon from our website. The registration deadline is not decided yet"
     },
     {
-      question: "What is the venue for GDG Hackathon?",
-      answer: "The hackathon will be held at the Sheraton Grand Hotel in downtown."
+      question: "What is the venue for Spectrum 1.0 ?",
+      answer: "The hackathon will be held at the Techno Main Salt Lake Campus"
     },
     {
       question: "Is food and accommodation provided free of charge, or are there any associated costs?",
       answer: "Food and accommodation will be provided free of charge for all participants."
     },
-    {
-      question: "Can a friend join our team after we have already submitted the application for registration?",
-      answer: "Yes, you can add friends to your team even after submitting the registration. Just contact the organizers, and they will assist you in making the changes."
-    }
+
   ];
 
   return (
