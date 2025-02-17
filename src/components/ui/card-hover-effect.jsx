@@ -35,9 +35,9 @@ export const HoverEffect = ({
                 }} />
             )}
           </AnimatePresence>
-          <Card className="border-[#800080cc]">
-            <CardTitle className="font-bold text-2xl">{item.title}</CardTitle>
-            <CardDescription className="text-purple-600 text-xl font-semibold">{item.description}</CardDescription>
+          <Card className="border-[#800080cc] flex justify-center">
+            <CardTitle className="font-bold text-2xl mb-4">{item.title}</CardTitle>
+            <img src= {item.image} alt={item.title}   className=' rounded-xl  h-24 w-24'></img>
           </Card>
         </a>
       ))}

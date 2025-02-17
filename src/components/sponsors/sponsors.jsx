@@ -1,4 +1,9 @@
 import { HoverEffect } from "../ui/card-hover-effect";
+import Devfolio from '../../assets/images/devfolio.png'
+import EthIndia from '../../assets/images/eth.png'
+import JetBrains from '../../assets/images/jetbrains.jpg'
+import Xyz from '../../assets/images/xyz.png'
+import { image } from "@heroui/react";
 
 export default function CardHoverEffectDemo() {
   return (
@@ -16,38 +21,24 @@ export default function CardHoverEffectDemo() {
 export const sponsors = [
   {
     title: "Devfolio",
-    description:
-      "Gold Sponsor",
-    link: "https://devfolio.co/",
+    image: Devfolio,
+    link: "https://stripe.com",
   },
   {
     title: "ETH India",
-    description:
-      "Gold Sponsor",
-    link: "https://ethindia2024.devfolio.co/",
+    image : EthIndia ,
+    link: "https://netflix.com",
   },
   {
-    title: "Sponsor 3",
-    description:
-      "Coming Soon",
-    link: "#",
+    title: ".xyz",
+    image : Xyz ,
+    link: "https://google.com",
   },
   {
-    title: "Sponsor 4",
-    description:
-      "Coming Soon",
-    link: "#",
+    title: "JetBrains",
+    image : JetBrains ,
+    link: "https://meta.com",
   },
-  {
-    title: "Sponsor 5",
-    description:
-      "Coming Soon",
-    link: "#",
-  },
-  {
-    title: "Sponsor 6",
-    description:
-      "Coming Soon",
-    link: "#",
-  },
+  
+
 ];

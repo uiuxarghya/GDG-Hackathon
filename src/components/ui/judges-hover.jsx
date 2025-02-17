@@ -37,7 +37,8 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card className="border-[#800080cc]">
             <CardTitle className="font-bold">{item.title}</CardTitle>
-            <img src={item.description} alt={item.title} className="w-60 h-48 mx-auto mt-4 ml-6 justify-center items-center align-middle" />
+            {/*
+            <img src={item.description} alt={item.title} className="w-60 h-48 mx-auto mt-4 ml-6 justify-center items-center align-middle" /> */}
             <div className='flex flex-row justify-center items-center align-middle'>
             <CardTitle className="font-medium text-purple-500 m-2 mt-4 p-2 text-xl hover:text-gray-500 transition-all ease-in">{item.icon1}</CardTitle>
             <CardTitle className="font-medium text-purple-500 m-2 mt-4 p-2 text-xl  hover:text-gray-500 transition-all ease-in">{item.icon2}</CardTitle>
