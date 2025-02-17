@@ -1,30 +1,56 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaPlay, FaPause } from "react-icons/fa";
 import backgroundmusic from "/music-lib/bgm1.mp3";
-import "@fontsource/caveat"; 
+
 
 const BackgroundMusic = () => {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
+
     if (audio) {
-      audio.volume = 0.35;
+      audio.volume = 0.5;
       audio.loop = true;
+
+      // Attempt autoplay
+      const tryAutoplay = async () => {
+        try {
+          await audio.play();
+          setIsPlaying(true);
+        } catch (error) {
+          console.log("Autoplay blocked. Waiting for user interaction...");
+          document.addEventListener("click", playOnInteraction, { once: true });
+          document.addEventListener("scroll", playOnInteraction, { once: true });
+          document.addEventListener("keydown", playOnInteraction, { once: true });
+        }
+      };
+
+      const playOnInteraction = async () => {
+        try {
+          await audio.play();
+          setIsPlaying(true);
+        } catch (error) {
+          console.log("Still blocked:", error);
+        }
+      };
+
+      tryAutoplay();
 
       const updateProgress = () => {
         setProgress((audio.currentTime / audio.duration) * 100);
       };
 
       audio.addEventListener("timeupdate", updateProgress);
-
-      // Start playing by default
-      audio.play().catch((error) => console.log("Autoplay blocked:", error));
-
-      return () => audio.removeEventListener("timeupdate", updateProgress);
+      return () => {
+        audio.removeEventListener("timeupdate", updateProgress);
+        document.removeEventListener("click", playOnInteraction);
+        document.removeEventListener("scroll", playOnInteraction);
+        document.removeEventListener("keydown", playOnInteraction);
+      };
     }
   }, []);
 
@@ -40,24 +66,18 @@ const BackgroundMusic = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-lg mx-auto p-6 mt-[15px] 
-                    rounded-xl bg-white/10 backdrop-blur-xl shadow-lg 
-                    border border-white/20 text-white">
+    <div className="flex justify-center items-center align-middle">
+    <div className="w-[65%]">
       
       {/* Haiku-Style Tagline */}
-      <div className="text-center tracking-wide mb-6 space-y-2">
-        <p className="uppercase text-lg font-semibold text-purple-300" style={{ fontFamily: "'Caveat', cursive" }}>
-          Take a break
-        </p>
-        <p className="text-4xl font-bold text-purple-400" style={{ fontFamily: "'Caveat', cursive" }}>
-          Watch the stars
-        </p>
-        <p className="italic text-lg text-purple-300" style={{ fontFamily: "'Caveat', cursive" }}>
-          Let yourself be immersed
+      <div className="text-center tracking-wide mt-4 space-y-2">
+      
+        <p className=" text-lg text-purple-300 mt-2" >
+         Play this Music to Flow with the Vibe
         </p>
       </div>
 
-      <audio ref={audioRef} src={backgroundmusic} preload="auto" autoPlay />
+      <audio ref={audioRef} src={backgroundmusic} preload="auto" />
 
       {/* Music Player Controls */}
       <div className="flex items-center w-full space-x-4">
@@ -66,7 +86,7 @@ const BackgroundMusic = () => {
           onClick={togglePlayPause}
           className="p-3 rounded-full bg-white/20 text-white hover:bg-purple-500 transition-all duration-300 shadow-lg"
         >
-          {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}
+          {isPlaying ? <FaPause size={8} /> : <FaPlay size={8} />}
         </button>
 
         {/* Progress Bar */}
@@ -81,6 +101,7 @@ const BackgroundMusic = () => {
           ></div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Spline from '@splinetool/react-spline';
 
 const Home = () => {
   return (
-    <main className="relative w-full h-screen">
+    <main className="relative w-full h-screen -mt-16">
       {/* Spline Background */}
       <div className="absolute inset-0">
         <div className="w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]">

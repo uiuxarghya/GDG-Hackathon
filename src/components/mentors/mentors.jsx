@@ -6,6 +6,7 @@ import Aditi from '../../assets/team/aditi.jpg'
 import Chandan from '../../assets/team/chandan.jpg'
 import Satyaki from '../../assets/team/satyaki.png'
 import Senjuti from '../../assets/team/senjuti.jpg'
+import Rudranil from '../../assets/team/rudranil.jpg'
 const teamMembers = [
   {
      name: " Aditya Seth ", 
@@ -53,6 +54,13 @@ const teamMembers = [
      name: " Chandan Kumar ", 
      role: "Tech Member", 
      img: Chandan ,
+     social1 :" " ,
+     social2 : " " ,
+    },
+  {
+     name: " Rudranil Chowdhury ", 
+     role: "Tech Member", 
+     img: Rudranil ,
      social1 :" " ,
      social2 : " " ,
     },
