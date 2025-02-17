@@ -18,36 +18,36 @@ export const sponsors = [
     title: "Devfolio",
     description:
       "Gold Sponsor",
-    link: "https://stripe.com",
+    link: "https://devfolio.co/",
   },
   {
     title: "ETH India",
     description:
       "Gold Sponsor",
-    link: "https://netflix.com",
+    link: "https://ethindia2024.devfolio.co/",
   },
   {
     title: "Sponsor 3",
     description:
       "Coming Soon",
-    link: "https://google.com",
+    link: "#",
   },
   {
     title: "Sponsor 4",
     description:
       "Coming Soon",
-    link: "https://meta.com",
+    link: "#",
   },
   {
     title: "Sponsor 5",
     description:
       "Coming Soon",
-    link: "https://amazon.com",
+    link: "#",
   },
   {
     title: "Sponsor 6",
     description:
       "Coming Soon",
-    link: "https://microsoft.com",
+    link: "#",
   },
 ];
