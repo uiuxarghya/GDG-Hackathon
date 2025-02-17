@@ -13,6 +13,7 @@ import Mentors from "./components/mentors/mentors";
 import Faq from "./components/faq/Faq";
 import Timeline from "./components/timeline/timeline";
 import Contact from "./components/contact/community";
+import BackgroundMusic from "./components/bgm/BackgroundMusic";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
         <>
           <ParticlesComponent id="particles" />
           <Navbar />
+          <BackgroundMusic />
           <section id="home"><Landing /></section>
           <section id="about"><About /></section>
           <section id="timeline"><Timeline /></section>

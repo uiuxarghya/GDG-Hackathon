@@ -40,4 +40,5 @@ export const sponsors = [
     link: "https://meta.com",
   },
   
+
 ];
