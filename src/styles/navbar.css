@@ -1,0 +1,240 @@
+.navbar {
+  width: 90%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  height: 4.5rem;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  color: gray;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-weight: 600;
+  font-size: larger;
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+  padding: 0 10px;
+}
+
+/* Adjust logo section */
+.navbar-logo-section {
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-section img {
+  height: 35px;
+}
+
+.navbar-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Adjust links */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Reduce gaps */
+  flex-wrap: wrap;
+  margin-left: 0;
+  width: auto;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  padding: 8px 8px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.778);
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: rgb(82, 81, 81);
+}
+
+.cursor {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(
+    45deg,
+    rgb(235, 95, 220),
+    rgb(179, 60, 255),
+    rgb(110, 10, 250)
+  );
+  background-size: 300% 300%;
+  animation: vibrantGradient 6s ease infinite;
+  border: 2px solid rgb(238, 52, 238);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.03s ease-out;
+  mix-blend-mode: difference;
+  will-change: transform;
+  z-index: -1;
+}
+
+/* Adjust authentication buttons */
+.navbar-auths {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: auto;
+  margin-left: 0;
+}
+/* hamburger menu css*/
+
+/* Enable Scroll on Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%; /* Widened the menu */
+  height: 55vh; /* Increased height for better visibility */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  padding: 25px;
+  overflow-y: auto; /* Enable scrolling */
+  max-height: 90vh;
+}
+
+/* Close Button Styling */
+.close-menu {
+  position: absolute;
+  top: 12px;
+  right: 20px; /* Moved to the extreme top right */
+  font-size: 28px; /* Increased size */
+  font-weight: bold;
+  background: rgb(179, 60, 255);
+  border: none;
+  padding: 8px 16px; /* Widened button */
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close-menu:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Make the menu text larger, bolder, and white */
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+/* Style Individual Link Items */
+.mobile-menu-links li {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Remove border from last item */
+.mobile-menu-links li:last-child {
+  border-bottom: none;
+}
+
+/* Mobile Menu Links Styling */
+.mobile-menu-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px; /* Made text larger */
+  font-weight: 700; /* Made text bolder */
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-menu-links a:hover {
+  color: #4a90e2;
+  transform: scale(1.07);
+}
+
+/* Scrollbar Customization */
+.mobile-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+
+  .navbar-logo-section img {
+    height: 30px;
+  }
+
+  .navbar-links {
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .navbar-links a {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .navbar-auths {
+    gap: 10px;
+    padding: 8px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

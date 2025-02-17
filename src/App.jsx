@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import Preloader from "./components/universal/Preloader"; // Import Preloader
-import Navbar from "./components/universal/navbar";
-import ParticlesComponent from "./components/universal/particles";
-import Tracks from "./components/tracks/tracks";
-import Footer from "./components/footer/Footer";
-import Landing from "./components/home/Landing";
-import About from "./components/home/about";
-import Sponsors from "./components/sponsors/sponsors";
-import Prizes from "./components/prizes/prizes";
-import Judges from "./components/judges/judges";
-import Mentors from "./components/mentors/mentors";
-import Faq from "./components/faq/Faq";
-import Timeline from "./components/timeline/timeline";
-import Contact from "./components/contact/community";
-import BackgroundMusic from "./components/bgm/BackgroundMusic";
+import Preloader from "./components/shared/preloader"; // Import Preloader
+import Navbar from "./components/shared/navbar";
+import ParticlesComponent from "./components/shared/particles";
+import Tracks from "./components/tracks";
+import Footer from "./components/shared/footer";
+import Landing from "./components/landing";
+import About from "./components/about";
+import Sponsors from "./components/sponsors";
+import Prizes from "./components/prizes";
+import Judges from "./components/judges";
+import Mentors from "./components/mentors";
+import Faq from "./components/faq";
+import Timeline from "./components/timeline";
+import Contact from "./components/community";
+import BackgroundMusic from "./components/bgm";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,16 +36,36 @@ function App() {
           <ParticlesComponent id="particles" />
           <Navbar />
           <BackgroundMusic />
-          <section id="home"><Landing /></section>
-          <section id="about"><About /></section>
-          <section id="timeline"><Timeline /></section>
-          <section id="tracks"><Tracks /></section>
-          <section id="sponsors"><Sponsors /></section>
-          <section id="prizes"><Prizes /></section>
-          <section id="judges"><Judges /></section>
-          <section id="mentors"><Mentors /></section>
-          <section id="contact"><Contact/></section>
-          <section id="faqs"><Faq /></section>
+          <section id="home">
+            <Landing />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="timeline">
+            <Timeline />
+          </section>
+          <section id="tracks">
+            <Tracks />
+          </section>
+          <section id="sponsors">
+            <Sponsors />
+          </section>
+          <section id="prizes">
+            <Prizes />
+          </section>
+          <section id="judges">
+            <Judges />
+          </section>
+          <section id="mentors">
+            <Mentors />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+          <section id="faqs">
+            <Faq />
+          </section>
           <Footer />
         </>
       )}
