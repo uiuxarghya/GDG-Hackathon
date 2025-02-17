@@ -37,7 +37,7 @@
   position: absolute;
   left: 50%;
   top: 0;
-  width: 4px;  /* Adjust thickness */
+  width: 4px; /* Adjust thickness */
   height: 100%;
   background: white; /* White vertical line */
   transform: translateX(-50%);
@@ -95,7 +95,6 @@
   .timeline {
     max-width: 100%;
     margin-left: -39px;
-
   }
 
   .timeline ul li {
@@ -108,7 +107,7 @@
   .timeline ul li::after {
     display: none; /* Hides the arrows and circles */
   }
-  
+
   .timeline ul::before {
     margin-left: 40px;
   }

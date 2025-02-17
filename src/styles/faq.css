@@ -24,7 +24,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
   width: 75%;
-  
+
   transition: all 0.3s ease-in-out;
 }
 
@@ -72,7 +72,7 @@
   .faq-container {
     padding: 3rem 1rem;
   }
-  
+
   .faq-title {
     font-size: 2.5rem;
   }
@@ -80,11 +80,11 @@
   .faq-items {
     width: 100%;
   }
-  
+
   .faq-item {
     width: 90%;
   }
-  
+
   .faq-question h3 {
     font-size: 1.1rem;
   }
@@ -98,19 +98,19 @@
   .faq-container {
     padding: 2rem 0.5rem;
   }
-  
+
   .faq-title {
     font-size: 2rem;
   }
-  
+
   .faq-item {
     width: 100%;
   }
-  
+
   .faq-question {
     padding: 0.8rem 1rem;
   }
-  
+
   .faq-question h3 {
     font-size: 1rem;
   }
@@ -118,7 +118,7 @@
   .faq-answer {
     padding: 0.8rem 1rem;
   }
-  
+
   .faq-answer p {
     font-size: 0.85rem;
     line-height: 1.6;

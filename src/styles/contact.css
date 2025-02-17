@@ -10,15 +10,12 @@
   background: transparent;
 }
 
-
-
-
 /* Make the Contact Form Responsive */
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 20px;
   }
- 
+
   .grid {
     display: flex;
     flex-direction: column;
@@ -35,7 +32,8 @@
 }
 
 /* Input Fields */
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px 15px;
   border-radius: 12px;
@@ -54,7 +52,7 @@ textarea::placeholder {
 
 /* Contact Button */
 button {
-  background:  rgb(182, 5, 182);
+  background: rgb(182, 5, 182);
   color: white;
   font-size: 16px;
   border: none;
@@ -70,13 +68,9 @@ button:hover {
 
 /* Adjust Spline Globe on Small Screens */
 @media screen and (max-width: 768px) {
- 
-
   .w-full {
     width: 100%;
   }
-
-  
 
   .mb-8 {
     margin-bottom: 20px;
@@ -93,7 +87,8 @@ button:hover {
 
 /* Adjust Form Fields for Mobile */
 @media screen and (max-width: 480px) {
-  input, textarea {
+  input,
+  textarea {
     font-size: 14px;
     padding: 10px;
   }
@@ -106,5 +101,4 @@ button:hover {
     font-size: 14px;
     padding: 10px;
   }
-  
 }

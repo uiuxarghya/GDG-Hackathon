@@ -118,23 +118,23 @@
 /* ✅ Mobile Responsive Fix */
 @media (max-width: 768px) {
   .countdown-container {
-      gap: 1rem;
+    gap: 1rem;
   }
 
   .countdown-number {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .hero-title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   /* Ensuring QR appears below location details */
   .event-section {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .whatsapp-section {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
