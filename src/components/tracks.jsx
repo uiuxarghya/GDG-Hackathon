@@ -1,14 +1,13 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCode, FaBrain, FaLeaf , } from "react-icons/fa";
+import { FaCode, FaBrain, FaLeaf } from "react-icons/fa";
 import { MdOutlineCastForEducation } from "react-icons/md";
 import { GrRestroomWomen } from "react-icons/gr";
 import { AiOutlineMedicineBox } from "react-icons/ai";
 
-
 const Card = ({ title, icon, children }) => {
   const [hovered, setHovered] = React.useState(false);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -34,9 +33,9 @@ const Card = ({ title, icon, children }) => {
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       <div className="relative z-20 flex flex-col items-center">
-        <motion.div 
+        <motion.div
           className="text-center mb-2"
           initial={{ opacity: 0.6, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,12 +53,17 @@ const Card = ({ title, icon, children }) => {
           {title}
         </motion.h2>
       </div>
-      
+
       {/* Subtle glowing effect on idle */}
       <motion.div
         initial={{ opacity: 0.2 }}
         animate={{ opacity: 0.5 }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", yoyo: true }}
+        transition={{
+          repeat: Infinity,
+          duration: 2,
+          ease: "easeInOut",
+          yoyo: true,
+        }}
         className="absolute inset-0 rounded-lg bg-purple-800 opacity-5 blur-md"
       />
     </motion.div>
@@ -70,31 +74,36 @@ const Card = ({ title, icon, children }) => {
 const App = () => {
   return (
     <>
-    <div>
-      <h1 className="track-heading mt-24 text-5xl text-center text-white font-bold">Explore <span className="text-purple-600">Tracks</span></h1>
-    </div>
-    <div className="flex flex-wrap justify-center gap-6 p-8">
-      <Card title="Web3" icon={<FaCode size={40} color="#c084fc" />}>
-        
-      </Card>
-      
-      <Card title="AI & ML" icon={<FaBrain size={40} color="#c084fc" />}>
-        
-      </Card>
-      
-      <Card title="Sustainability" icon={<FaLeaf size={40} color="#c084fc" />}>
-        
-      </Card>
-      <Card title="Healthcare" icon={<AiOutlineMedicineBox size={40} color="#c084fc" />}>
-    
-      </Card>
-      <Card title="Education" icon={<MdOutlineCastForEducation  size={40} color="#c084fc" />}>
-        
-      </Card>
-      <Card title="Women Safety" icon={<GrRestroomWomen size={40} color="#c084fc" />}>
-      
-      </Card>
-    </div>
+      <div>
+        <h1 className="track-heading mt-24 text-5xl text-center text-white font-bold">
+          Explore <span className="text-purple-600">Tracks</span>
+        </h1>
+      </div>
+      <div className="flex flex-wrap justify-center gap-6 p-8">
+        <Card title="Web3" icon={<FaCode size={40} color="#c084fc" />}></Card>
+
+        <Card
+          title="AI & ML"
+          icon={<FaBrain size={40} color="#c084fc" />}
+        ></Card>
+
+        <Card
+          title="Sustainability"
+          icon={<FaLeaf size={40} color="#c084fc" />}
+        ></Card>
+        <Card
+          title="Healthcare"
+          icon={<AiOutlineMedicineBox size={40} color="#c084fc" />}
+        ></Card>
+        <Card
+          title="Education"
+          icon={<MdOutlineCastForEducation size={40} color="#c084fc" />}
+        ></Card>
+        <Card
+          title="Women Safety"
+          icon={<GrRestroomWomen size={40} color="#c084fc" />}
+        ></Card>
+      </div>
     </>
   );
 };

@@ -1,19 +1,14 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 
-import { loadSlim } from "@tsparticles/slim";  
-
-
+import { loadSlim } from "@tsparticles/slim";
 
 const ParticlesComponent = (props) => {
-
   const [init, setInit] = useState(false);
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      
       await loadSlim(engine);
-      
     }).then(() => {
       setInit(true);
     });
@@ -22,7 +17,6 @@ const ParticlesComponent = (props) => {
   const particlesLoaded = (container) => {
     console.log(container);
   };
-
 
   const options = useMemo(
     () => ({
@@ -40,7 +34,7 @@ const ParticlesComponent = (props) => {
           },
           onHover: {
             enable: true,
-            mode: 'grab',
+            mode: "grab",
           },
         },
         modes: {
@@ -95,8 +89,7 @@ const ParticlesComponent = (props) => {
     [],
   );
 
-
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return <Particles id={props.id} init={particlesLoaded} options={options} />;
 };
 
 export default ParticlesComponent;

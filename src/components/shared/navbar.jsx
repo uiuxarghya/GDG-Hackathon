@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll"; // ✅ Use react-scroll instead of react-router-dom
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import Logo from "../../assets/images/Spectrum1.0.png";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FiGithub } from "react-icons/fi";
 import { SiLinkedin } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { GiHamburgerMenu } from "react-icons/gi"; 
-import "../css/navbar.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import "../../styles/navbar.css";
 
-const navbarItems = ["Home",  "Timeline", "Tracks", "Sponsors", "Prizes", "Judges", "Team",  "FAQs"];
+const navbarItems = [
+  "Home",
+  "Timeline",
+  "Tracks",
+  "Sponsors",
+  "Prizes",
+  "Judges",
+  "Team",
+  "FAQs",
+];
 
 const Navbar = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -66,14 +79,23 @@ const Navbar = () => {
           className="navbar"
         >
           {isHovered && !isMobile && (
-            <div className="cursor" style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }} />
+            <div
+              className="cursor"
+              style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}
+            />
           )}
 
           <div className="navbar-box">
             {/* Logo Section */}
             <div className="navbar-logo-section">
-              <a href="/" className="text-lg font-bold">Spectrum 1.0</a>
-              <img src={Logo} alt="Logo" className="w-10 h-10 ml-2" />
+              <a href="/" className="text-lg font-bold">
+                Spectrum 1.0
+              </a>
+              <img
+                src="/assets/images/Spectrum1.0.png"
+                alt="Logo"
+                className="w-10 h-10 ml-2"
+              />
             </div>
 
             {/* Desktop Navbar Links */}
@@ -82,10 +104,10 @@ const Navbar = () => {
                 <ul className="navbar-links">
                   {navbarItems.map((item, index) => (
                     <li key={index}>
-                      <ScrollLink 
-                        to={item.toLowerCase()} 
-                        smooth={true} 
-                        duration={500} 
+                      <ScrollLink
+                        to={item.toLowerCase()}
+                        smooth={true}
+                        duration={500}
                         offset={-80} // Adjust for navbar height
                         className="hover:text-blue-500 transition cursor-pointer"
                       >
@@ -97,17 +119,28 @@ const Navbar = () => {
 
                 {/* Social Media Icons */}
                 <div className="navbar-auths flex space-x-3 text-xl">
-                  <a href="#" className="hover:text-gray-300 transition"><FiGithub /></a>
-                  <a href="#" className="hover:text-blue-600 transition"><SiLinkedin /></a>
-                  <a href="#" className="hover:text-gray-300 transition"><FaXTwitter /></a>
-                  <a href="#" className="hover:text-pink-400 transition"><IoLogoInstagram /></a>
+                  <a href="#" className="hover:text-gray-300 transition">
+                    <FiGithub />
+                  </a>
+                  <a href="#" className="hover:text-blue-600 transition">
+                    <SiLinkedin />
+                  </a>
+                  <a href="#" className="hover:text-gray-300 transition">
+                    <FaXTwitter />
+                  </a>
+                  <a href="#" className="hover:text-pink-400 transition">
+                    <IoLogoInstagram />
+                  </a>
                 </div>
               </>
             )}
 
             {/* Mobile Hamburger Menu */}
             {isMobile && (
-              <button onClick={() => setMenuOpen(!menuOpen)} className="hamburger-menu">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="hamburger-menu"
+              >
                 <GiHamburgerMenu size={24} />
               </button>
             )}
@@ -125,15 +158,17 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="mobile-menu"
           >
-            <button onClick={() => setMenuOpen(false)} className="close-menu">✖</button>
+            <button onClick={() => setMenuOpen(false)} className="close-menu">
+              ✖
+            </button>
             <ul className="mobile-menu-links">
               {navbarItems.map((item, index) => (
                 <li key={index}>
-                  <ScrollLink 
-                    to={item.toLowerCase()} 
-                    smooth={true} 
-                    duration={500} 
-                    offset={-80} 
+                  <ScrollLink
+                    to={item.toLowerCase()}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
                     className="hover:text-blue-500 transition cursor-pointer"
                     onClick={() => setMenuOpen(false)} // Close menu on click
                   >

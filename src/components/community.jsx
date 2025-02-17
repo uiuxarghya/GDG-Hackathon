@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Spline from '@splinetool/react-spline';
+import Spline from "@splinetool/react-spline";
 import emailjs from "@emailjs/browser";
-import '../css/contact.css'
+import "../styles/contact.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,34 +18,38 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send(
-      "service_yfamvcu",  // Replace with your EmailJS Service ID
-      "template_m6ryxpm",  // Replace with your EmailJS Template ID
-      {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        message: formData.message,
-      },
-      "9DtqPv_wCc5L4Er2F"  // Replace with your EmailJS Public Key
-    ).then(
-      (response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        alert("Message sent successfully!");
-        setFormData({ firstName: "", lastName: "", email: "", message: "" });
-      },
-      (error) => {
-        console.error("FAILED...", error);
-        alert("Failed to send message. Please try again.");
-      }
-    );
+    emailjs
+      .send(
+        "service_yfamvcu", // Replace with your EmailJS Service ID
+        "template_m6ryxpm", // Replace with your EmailJS Template ID
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          message: formData.message,
+        },
+        "9DtqPv_wCc5L4Er2F", // Replace with your EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Message sent successfully!");
+          setFormData({ firstName: "", lastName: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          alert("Failed to send message. Please try again.");
+        },
+      );
   };
 
   return (
     <section className="bg-transparent px-6 py-12">
       <div className="container mx-auto">
         <div>
-          <p className="font-bold text-5xl text-purple-700 text-center">Contact us</p>
+          <p className="font-bold text-5xl text-purple-700 text-center">
+            Contact us
+          </p>
         </div>
 
         {/* Responsive Layout */}
@@ -60,7 +64,9 @@ export default function Contact() {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <div>
-                  <label className="block mb-2 text-md text-start text-gray-200">First Name</label>
+                  <label className="block mb-2 text-md text-start text-gray-200">
+                    First Name
+                  </label>
                   <input
                     type="text"
                     name="firstName"
@@ -73,7 +79,9 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block mb-2 text-md text-start text-gray-200">Last Name</label>
+                  <label className="block mb-2 text-md text-start text-gray-200">
+                    Last Name
+                  </label>
                   <input
                     type="text"
                     name="lastName"
@@ -87,7 +95,9 @@ export default function Contact() {
               </div>
 
               <div className="mt-4">
-                <label className="block mb-2 text-md text-start text-gray-200">Email address</label>
+                <label className="block mb-2 text-md text-start text-gray-200">
+                  Email address
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -100,7 +110,9 @@ export default function Contact() {
               </div>
 
               <div className="w-full mt-4">
-                <label className="block mb-2 text-md text-start text-gray-200">Send Your Message</label>
+                <label className="block mb-2 text-md text-start text-gray-200">
+                  Send Your Message
+                </label>
                 <textarea
                   name="message"
                   value={formData.message}
